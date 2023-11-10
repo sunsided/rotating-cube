@@ -6,6 +6,8 @@ A port of Jeremy Kescher's [RotatingCube](https://github.com/kescherCode/Rotatin
 
 A small Rust console application to display a cube and rotate it, manually or automatically.
 
+![Screenshot](screenshot.png)
+
 ## Controls
 
 - W and S rotate the cube up or down in the x-axis.
