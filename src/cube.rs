@@ -9,7 +9,7 @@ use crossterm::{
 use rand::Rng;
 use std::io::Write;
 
-static TITLE: &str = "Press ESC to exit | Rotating Cube Demo by Jeremy Kescher and Markus Mayer";
+static TITLE: &str = "Press ESC to exit | A Rotating Cube Demo by Jeremy Kescher and Markus Mayer";
 
 struct CornerData {
     a: Point3D,

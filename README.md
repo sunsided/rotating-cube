@@ -1,4 +1,4 @@
-# RotatingCube
+# rotating-cube
 
 A port of Jeremy Kescher's [RotatingCube](https://github.com/kescherCode/RotatingCube) in C#.
 
