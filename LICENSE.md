@@ -2,7 +2,7 @@
 
 Version 2, December 2004
 
-Copyright (C) 2017 Jeremy Kescher
+Copyright (C) 2017 Jeremy Kescher  
 Copyright (C) 2023 Markus Mayer
 
 Everyone is permitted to copy and distribute verbatim or modified
