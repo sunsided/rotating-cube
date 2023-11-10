@@ -1,6 +1,6 @@
 # RotatingCube
 
-A port of [RotatingCube](https://github.com/kescherCode/RotatingCube) by Jeremy Kescher.
+A port of Jeremy Kescher's [RotatingCube](https://github.com/kescherCode/RotatingCube) in C#.
 
 ---
 

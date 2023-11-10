@@ -1,4 +1,5 @@
 use crate::point3d::Point3D;
+use crossterm::style::Color;
 use crossterm::{
     cursor,
     event::{self, KeyCode, KeyEvent, KeyModifiers},
@@ -72,7 +73,7 @@ impl Cube {
         execute!(
             std::io::stdout(),
             terminal::SetTitle(TITLE),
-            terminal::SetSize(30, 60),
+            terminal::SetSize(60, 30),
             terminal::Clear(ClearType::All),
             cursor::Hide,
         )
@@ -102,7 +103,13 @@ impl Cube {
                 execute!(
                     std::io::stdout(),
                     cursor::MoveTo(x as _, y as _),
-                    style::Print('*') // █
+                    style::SetForegroundColor(Color::Red),
+                    style::SetBackgroundColor(Color::Rgb {
+                        r: 20,
+                        g: 20,
+                        b: 42
+                    }),
+                    style::Print("•") // █
                 )
                 .unwrap();
             }
@@ -160,7 +167,6 @@ impl Cube {
             self.ang_x += rand::thread_rng().gen_range(0..=2) as f32;
             self.ang_y += rand::thread_rng().gen_range(0..=2) as f32;
             self.ang_z += rand::thread_rng().gen_range(0..=2) as f32;
-            // std::thread::sleep(std::time::Duration::from_millis(25));
         }
     }
 
@@ -169,7 +175,8 @@ impl Cube {
     }
 
     pub fn exit(&self) {
-        execute!(std::io::stdout(), cursor::Show).unwrap();
+        execute!(std::io::stdout(), style::ResetColor, cursor::Show).unwrap();
+        self.clear_screen();
         terminal::disable_raw_mode().unwrap();
     }
 }
